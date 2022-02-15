@@ -1,8 +1,23 @@
-import React from 'react'
-
+import React, { useState, useEffect, useRef } from 'react'
+import {useStyles }from "../Styles/mainStyles";
+import {
+  Grid,
+  Typography,
+  TextField,
+  Button,
+  IconButton,
+  Chip,
+ 
+  Divider
+} from '@material-ui/core'
 function VizArea() {
+
+    const classes = useStyles();
+
   return (
-    <div>VizArea</div>
+    <Grid container className={classes.vizContainer}>
+        
+    </Grid>
   )
 }
 
