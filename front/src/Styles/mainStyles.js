@@ -5,7 +5,7 @@ export const useStyles = makeStyles((theme) => ({
     buttonRow:{
         width: "40vw",
         margin: "10vh auto 20px auto",
-        justifyContent: "space-between",
+        justifyContent: "space-evenly",
        
     },
     vizContainer:{
