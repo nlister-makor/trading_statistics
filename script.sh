@@ -1,23 +1,30 @@
 calcTradesTime(){
-  
+
 
 TIMEFORMAT=%R
 
-token=$(curl -s  --location --request  PUT 'https://sb20.rest-api.enigma-securities.io/auth' \
+{ time token=$(curl -s  --location --request  PUT 'https://sb20.rest-api.enigma-securities.io/auth' \
 --header 'Content-Type: application/json' \
 --data-raw '{
 "username": "client_test_2",
  "password": "Test123!"
-}' | jq -r '.key') 
+}' | jq -r '.key');} 2> time.txt
+
+tokenTime=$(cat time.txt)
+
+thread=()
+tokenObj="{\"token\":\"$tokenTime\"},{\"data\":["
+thread+=$tokenObj
 
 
 data=$(curl --location --request GET 'https://sb20.rest-api.enigma-securities.io/product' \
 --header "Authorization: Bearer $token"  )
 
+thread=()
+tokenObj="{"token":"$token"}"
+thread+=$tokenObj
 
-
-
-
+echo thread
 arrayLength=$(echo $data | jq length-1)
 mkdir coins_performence
 for i in $(seq 0 $arrayLength)
@@ -109,6 +116,8 @@ for i in $(seq 0 $arrayLength)
     done
   done
 done
+
+printf "[$thread]}]" > thread.json
 
 }
 calcTradesTime 
