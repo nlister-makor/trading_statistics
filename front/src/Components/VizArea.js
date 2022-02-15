@@ -1,15 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react'
 import {useStyles }from "../Styles/mainStyles";
 import data from "../model_data.json";
-import {
-  Grid,
-  Typography,
-  TextField,
-  Button,
-  IconButton,
-  Chip,
-  Divider
-} from '@material-ui/core'
+import { Grid } from '@material-ui/core'
 import BarChart from './d3/BarChart';
 function VizArea() {
 

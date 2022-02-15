@@ -6,15 +6,17 @@ export const useStyles = makeStyles((theme) => ({
         width: "40vw",
         margin: "10vh auto 20px auto",
         justifyContent: "space-evenly",
-        overflowX: "auto",
-       
+               
     },
     vizContainer:{
         backgroundColor: 'var(--main)',
-        minWidth: "70%",
-        minHeight: "600px",
+        width: "100%",
+        height: "700px",
         borderRadius: "8px",
         marginTop:50,
+        overflowX: "auto",
+        overflowY: "hidden"
+
         
 
     }

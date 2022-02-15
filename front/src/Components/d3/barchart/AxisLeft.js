@@ -5,7 +5,7 @@ function AxisLeft({  yScale }) {
     <>
          {yScale.ticks().map(tickValue => (
             <g className="tick">
-            <text
+            {/* <text
                 key={tickValue}
                 style={{ textAnchor: 'end' }}
                 x={-3}
@@ -13,7 +13,7 @@ function AxisLeft({  yScale }) {
                 y={yScale(tickValue) + yScale.bandwidth() / 2}
             >
                 {tickValue}
-            </text>
+            </text> */}
             </g>
          ))}
     </>

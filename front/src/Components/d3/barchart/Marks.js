@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Marks({data,xScale,yScale,xValue,yValue,tooltipFormat}) {
+function Marks({data,xScale,yScale,xValue,yValue,tooltipFormat, innerHeight}) {
   return (
     <>
         {
@@ -8,12 +8,14 @@ function Marks({data,xScale,yScale,xValue,yValue,tooltipFormat}) {
                 <rect
                 className="mark"
                 key={yValue(d)}
-                x={0}
+                x={xScale(xValue(d))}
                 y={yScale(yValue(d))}
-                width={xScale(xValue(d))}
-                height={yScale.bandwidth()}
+                //width={xScale(xValue(d))}
+                width={xScale.bandwidth()}
+                height={innerHeight - yScale(yValue(d))}
+                fill="var(--secondary)"
                 >
-                <title>{tooltipFormat(xValue(d))}</title>
+                <title>{d.name} {d.side} {d.type} {Math.round(d.time*1000)}ms</title>
             </rect>
             ))}
     </>
