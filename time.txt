@@ -1,0 +1,21 @@
+
+real	0m0.002s
+user	0m0.001s
+sys	0m0.000s
+./script2.sh: line 6: =: command not found
+
+real	0m0.576s
+user	0m0.033s
+sys	0m0.028s
+./script2.sh: line 8: =: command not found
+0.558
+./script2.sh: line 8: =: command not found
+0.387
+./script2.sh: line 8: =: command not found
+0.456
+./script2.sh: line 9: =: command not found
+0.482
+./script2.sh: line 9: =: command not found
+0.410
+./script2.sh: line 9: =: command not found
+0.410
