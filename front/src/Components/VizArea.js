@@ -10,18 +10,17 @@ import {
   Chip,
   Divider
 } from '@material-ui/core'
+import BarChart from './d3/BarChart';
 function VizArea() {
 
     const classes = useStyles();
-    console.log(data)
-
-   
+    console.log(data.data)
     
 
 
   return (
     <Grid container className={classes.vizContainer}>
-        
+        <BarChart data={data.data}/>
     </Grid>
   )
 }

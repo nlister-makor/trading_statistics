@@ -6,6 +6,7 @@ export const useStyles = makeStyles((theme) => ({
         width: "40vw",
         margin: "10vh auto 20px auto",
         justifyContent: "space-evenly",
+        overflowX: "auto",
        
     },
     vizContainer:{
